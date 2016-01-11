@@ -3,8 +3,6 @@
 // github - https://github.com/Arsh23/
 
 
-
-//sub heading animation
 function isScrolledIntoView(elem)
 {
     var $elem = $(elem);
