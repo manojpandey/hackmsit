@@ -169,7 +169,7 @@ function main()
 	if(isScrolledIntoView('.sub-heading-5') == true && ids[4]==0)
 	{
 		counter[4] = 0
-		array[4] = return_arr('CONACT')
+		array[4] = return_arr('CONTACT')
 		setTimeout(function(){ids[4] = setInterval( function() { animate_heading_5('.sub-heading-5'); }, timer);},delay);
 		
 	}
