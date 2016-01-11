@@ -141,21 +141,21 @@ function main()
 	if(isScrolledIntoView('.sub-heading-1') == true && ids[0]==0)
 	{
 		counter[0] = 0
-		array[0] = return_arr('SCHEDULE')
+		array[0] = return_arr('ABOUT')
 		setTimeout(function(){ids[0] = setInterval( function() { animate_heading_1('.sub-heading-1'); }, timer);},delay);
 		
 	}
 	if(isScrolledIntoView('.sub-heading-2') == true && ids[1]==0)
 	{
 		counter[1] = 0
-		array[1] = return_arr('FAQ')
+		array[1] = return_arr('SCHEDULE')
 		setTimeout(function(){ids[1] = setInterval( function() { animate_heading_2('.sub-heading-2'); }, timer);},delay);
 		
 	}
 	if(isScrolledIntoView('.sub-heading-3') == true && ids[2]==0)
 	{
 		counter[2] = 0
-		array[2] = return_arr('ABOUT')
+		array[2] = return_arr('FAQ')
 		setTimeout(function(){ids[2] = setInterval( function() { animate_heading_3('.sub-heading-3'); }, timer);},delay);
 		
 	}
