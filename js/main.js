@@ -14,7 +14,7 @@ $('.nav-text').mouseenter(
 );
 
 // fix navbar to top after scroll
-/*
+
 $(document).ready(
 	function() 
 	{
@@ -34,4 +34,3 @@ $(document).ready(
 		);
 	}
 );
-*/
