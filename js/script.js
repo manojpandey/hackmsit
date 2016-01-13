@@ -73,56 +73,141 @@ var array = [[],[],[],[],[]];
 var counter = [0,0,0,0,0];
 
 
-function animate_heading_1(elem)
+function animate_heading_1(elem,reverse)
 {
+	reverse = reverse || false;
 	var $elem = $(elem);
-	if(counter[0] == array[0].length - 1)
+	if(reverse == false)
 	{
-		clearInterval(ids[0]);
+		if(counter[0] == array[0].length - 1)
+		{
+			clearInterval(ids[0]);
+			//ids[0] = 0;
+		}
+		$elem.html(array[0][counter[0]])
+		counter[0] += 1
 	}
-	$elem.html(array[0][counter[0]])
-	counter[0] += 1
+	else
+	{
+		if(counter[0] < 0)
+		{
+			$elem.html('');
+			clearInterval(ids[0]);
+			//ids[0] = 0;
+		}
+		$elem.html(array[0][counter[0]]);
+		counter[0] -= 1;
+	}
+
 }
 
-function animate_heading_2(elem)
+function animate_heading_2(elem,reverse)
 {
+	reverse = reverse || false;
 	var $elem = $(elem);
-	if(counter[1] == array[1].length - 1)
+	if(reverse == false)
 	{
-		clearInterval(ids[1]);
+		if(counter[1] == array[1].length - 1)
+		{
+			clearInterval(ids[1]);
+			//ids[1] = 0;
+		}
+		$elem.html(array[1][counter[1]])
+		counter[1] += 1
 	}
-	$elem.html(array[1][counter[1]])
-	counter[1] += 1
+	else
+	{
+		if(counter[1] < 0)
+		{
+			$elem.html('');
+			clearInterval(ids[1]);
+			//ids[1] = 0;
+		}
+		$elem.html(array[1][counter[1]]);
+		counter[1] -= 1;
+	}
+
 }
-function animate_heading_3(elem)
+function animate_heading_3(elem,reverse)
 {
+	reverse = reverse || false;
 	var $elem = $(elem);
-	if(counter[2] == array[2].length - 1)
+	if(reverse == false)
 	{
-		clearInterval(ids[2]);
+		if(counter[2] == array[2].length - 1)
+		{
+			clearInterval(ids[2]);
+			//ids[2] = 0;
+		}
+		$elem.html(array[2][counter[2]])
+		counter[2] += 1
 	}
-	$elem.html(array[2][counter[2]])
-	counter[2] += 1
+	else
+	{
+		if(counter[2] < 0)
+		{
+			$elem.html('');
+			clearInterval(ids[2]);
+			//ids[2] = 0;
+		}
+		$elem.html(array[2][counter[2]]);
+		counter[2] -= 1;
+	}
+
 }
-function animate_heading_4(elem)
+function animate_heading_4(elem,reverse)
 {
+	reverse = reverse || false;
 	var $elem = $(elem);
-	if(counter[3] == array[3].length - 1)
+	if(reverse == false)
 	{
-		clearInterval(ids[3]);
+		if(counter[3] == array[3].length - 1)
+		{
+			clearInterval(ids[3]);
+			//ids[3] = 0;
+		}
+		$elem.html(array[3][counter[3]])
+		counter[3] += 1
 	}
-	$elem.html(array[3][counter[3]])
-	counter[3] += 1
+	else
+	{
+		if(counter[3] < 0)
+		{
+			$elem.html('');
+			clearInterval(ids[3]);
+			//ids[3] = 0;
+		}
+		$elem.html(array[3][counter[3]]);
+		counter[3] -= 1;
+	}
+
 }
-function animate_heading_5(elem)
+function animate_heading_5(elem,reverse)
 {
+	reverse = reverse || false;
 	var $elem = $(elem);
-	if(counter[4] == array[4].length - 1)
+	if(reverse == false)
 	{
-		clearInterval(ids[4]);
+		if(counter[4] == array[4].length - 1)
+		{
+			clearInterval(ids[4]);
+			//ids[4] = 0;
+		}
+		$elem.html(array[4][counter[4]])
+		counter[4] += 1
 	}
-	$elem.html(array[4][counter[4]])
-	counter[4] += 1
+	else
+	{
+		if(counter[4] < 0)
+		{
+			$elem.html('');
+			clearInterval(ids[4]);
+			//ids[4] = 0;
+		}
+		$elem.html(array[4][counter[4]]);
+		counter[4] -= 1;
+	}
+
 }
 //------------------------------------------------------------------------------------------------
 //animate sub headings code ends
@@ -133,63 +218,135 @@ var scene = new ScrollMagic.Scene({triggerElement: "#trigger-hdg-1",triggerHook:
 					.addTo(controller)
 					.addIndicators({name: "first heading"})
 					.on("start", function (e) {	
-						if(ids[0] == 0)
+						if(e.scrollDirection == 'FORWARD')
 						{
-							counter[0] = 0
-							array[0] = return_arr('ABOUT')
-							setTimeout(function(){ids[0] = setInterval( function() { animate_heading_1('.sub-heading-1'); }, timer);},delay);
+							if(ids[0] == 0)
+							{
+								counter[0] = 0
+								array[0] = return_arr('ABOUT')
+								setTimeout(function(){ids[0] = setInterval( function() { animate_heading_1('.sub-heading-1'); }, timer);},delay);
+							}
 						}
-
+						else if(e.scrollDirection == 'REVERSE')
+						{
+							if(ids[0] == 0)
+							{
+								array[0] = return_arr('ABOUT')
+								counter[0] = array[0].length;
+								setTimeout(function(){ids[0] = setInterval( function() { animate_heading_1('.sub-heading-1',true); }, timer);},delay);
+							}	
+						}
 					});
 //animate second headings
 var scene = new ScrollMagic.Scene({triggerElement: "#trigger-hdg-2",triggerHook: 'onEnter',offset: 50, duration: 0})
 					.addTo(controller)
 					.addIndicators({name: "second heading"})
 					.on("start", function (e) {	
-						if(ids[1] == 0)
+						if(e.scrollDirection == "FORWARD")
 						{
-							counter[1] = 0
-							array[1] = return_arr('SCHEDULE')
-							setTimeout(function(){ids[1] = setInterval( function() { animate_heading_2('.sub-heading-2'); }, timer);},delay);
+							if(ids[1] == 0)
+							{
+								counter[1] = 0
+								array[1] = return_arr('SCHEDULE')
+								setTimeout(function(){ids[1] = setInterval( function() { animate_heading_2('.sub-heading-2'); }, timer);},delay);
+							}
 						}
-
+						else if(e.scrollDirection == 'REVERSE')
+						{
+							if(ids[1] == 0)
+							{
+								array[1] = return_arr('SCHEDULE')
+								counter[1] = array[1].length;
+								setTimeout(function(){ids[1] = setInterval( function() { animate_heading_2('.sub-heading-2',true); }, timer);},delay);
+							}
+						}
 					});
 //animate third headings
 var scene = new ScrollMagic.Scene({triggerElement: "#trigger-hdg-3",triggerHook: 'onEnter',offset: 50, duration: 0})
 					.addTo(controller)
 					.addIndicators({name: "third heading"})
 					.on("start", function (e) {	
-						if(ids[2] == 0)
+						if(e.scrollDirection == "FORWARD")
 						{
-							counter[2] = 0
-							array[2] = return_arr('FAQ')
-							setTimeout(function(){ids[2] = setInterval( function() { animate_heading_3('.sub-heading-3'); }, timer);},delay);	
+							if(ids[2] == 0)
+							{
+								counter[2] = 0
+								array[2] = return_arr('FAQ')
+								setTimeout(function(){ids[2] = setInterval( function() { animate_heading_3('.sub-heading-3'); }, timer);},delay);	
+							}
 						}
-
+						else if(e.scrollDirection == 'REVERSE')
+						{
+							if(ids[2] == 0)
+							{
+								array[2] = return_arr('FAQ')
+								counter[2] = array[2].length;
+								setTimeout(function(){ids[2] = setInterval( function() { animate_heading_3('.sub-heading-3',true); }, timer);},delay);	
+							}
+						}
 					});
 //animate fourth headings
 var scene = new ScrollMagic.Scene({triggerElement: "#trigger-hdg-4",triggerHook: 'onEnter',offset: 50, duration: 0})
 					.addTo(controller)
 					.addIndicators({name: "fourth heading"})
 					.on("start", function (e) {	
-						if(ids[3] == 0)
+						if(e.scrollDirection == "FORWARD")
 						{
-							counter[3] = 0
-							array[3] = return_arr('SPONSORS')
-							setTimeout(function(){ids[3] = setInterval( function() { animate_heading_4('.sub-heading-4'); }, timer);},delay);	
+							if(ids[3] == 0)
+							{
+								counter[3] = 0
+								array[3] = return_arr('SPONSORS')
+								setTimeout(function(){ids[3] = setInterval( function() { animate_heading_4('.sub-heading-4'); }, timer);},delay);	
+							}
 						}
-
+						else if(e.scrollDirection == 'REVERSE')
+						{
+							if(ids[3] == 0)
+							{
+								array[3] = return_arr('SPONSORS')
+								counter[3] = array[3].length;
+								setTimeout(function(){ids[3] = setInterval( function() { animate_heading_4('.sub-heading-4',true); }, timer);},delay);	
+							}
+						}
 					});
 //animate fifth headings
 var scene = new ScrollMagic.Scene({triggerElement: "#trigger-hdg-5",triggerHook: 'onEnter',offset: 50, duration: 0})
 					.addTo(controller)
 					.addIndicators({name: "fifth heading"})
 					.on("start", function (e) {	
-						if(ids[4] == 0)
+						if(e.scrollDirection == "FORWARD")
 						{
-							counter[4] = 0
-							array[4] = return_arr('CONTACT')
-							setTimeout(function(){ids[4] = setInterval( function() { animate_heading_5('.sub-heading-5'); }, timer);},delay);	
+							if(ids[4] == 0)
+							{
+								counter[4] = 0
+								array[4] = return_arr('CONTACT')
+								setTimeout(function(){ids[4] = setInterval( function() { animate_heading_5('.sub-heading-5'); }, timer);},delay);	
+							}
 						}
-
-					});															
+						else if(e.scrollDirection == 'REVERSE')
+						{
+							if(ids[4] == 0)
+							{
+								array[4] = return_arr('CONTACT')
+								counter[4] = array[4].length;
+								setTimeout(function(){ids[4] = setInterval( function() { animate_heading_5('.sub-heading-5',true); }, timer);},delay);	
+							}
+						}
+					});		
+//gears animation
+var gear1 = TweenMax.to(".gear-big", 1, {rotation: 1000, ease: Sine.easeOut});
+var gear2 = TweenMax.to(".gear-small", 1, {rotation: -3000, ease: Sine.easeOut});
+var gear3 = TweenMax.to(".gear-med", 1, {rotation: 600, ease: Sine.easeOut});
+var scene = new ScrollMagic.Scene({duration:10000})				
+					.setTween(gear1)
+					.addTo(controller)
+					.addIndicators({name: "animate gears"});
+var scene = new ScrollMagic.Scene({duration:10000})				
+					.setTween(gear2)
+					.addTo(controller)
+					.addIndicators({name: "animate gears"});
+var scene = new ScrollMagic.Scene({duration:10000})				
+					.setTween(gear3)
+					.addTo(controller)
+					.addIndicators({name: "animate gears"});
+										
