@@ -349,4 +349,60 @@ var scene = new ScrollMagic.Scene({duration:10000})
 					.setTween(gear3)
 					.addTo(controller)
 					.addIndicators({name: "animate gears"});
-										
+//info box animation
+$('.info-box').hover(
+	function()
+	{
+		$(this).addClass('info-box-animate');
+		$(this).stop(true,true).siblings('.info-heading').css('opacity','0');
+		$(this).stop(true,true).siblings('.info-text').css('opacity','1');
+	},
+	function()
+	{
+		$(this).removeClass('info-box-animate');
+		$(this).stop(true,true).siblings('.info-heading').css('opacity','1');
+		$(this).stop(true,true).siblings('.info-text').css('opacity','0');
+	}
+);			
+$('.info-heading').hover(
+	function()
+	{
+		$(this).siblings('.info-box').addClass('info-box-animate');
+		$(this).stop(true,true).css('opacity','0');
+		$(this).stop(true,true).siblings('.info-text').css('opacity','1');
+	},
+	function()
+	{
+		$(this).siblings('.info-box').removeClass('info-box-animate');
+		$(this).stop(true,true).css('opacity','1');
+		$(this).stop(true,true).siblings('.info-text').css('opacity','0');
+	}
+);				
+$('.info-text').hover(
+	function()
+	{
+		$(this).siblings('.info-box').addClass('info-box-animate');
+		$(this).stop(true,true).siblings('.info-heading').css('opacity','0');
+		$(this).stop(true,true).css('opacity','1');
+	},
+	function()
+	{
+		$(this).siblings('.info-box').removeClass('info-box-animate');
+		$(this).stop(true,true).siblings('.info-heading').css('opacity','1');
+		$(this).stop(true,true).css('opacity','0');
+	}
+);					
+// lines animation
+/*
+var orig = document.querySelector('path'), length, timer;
+var obj = {length:0, pathLength:orig.getTotalLength()};
+var lines = TweenMax.to(obj, 10, {length:obj.pathLength, onUpdate:drawLine, ease:Linear.easeNone})
+function drawLine() {
+  orig.style.strokeDasharray = [obj.length,obj.pathLength].join(' ');
+  //updateSlider();
+}
+var scene = new ScrollMagic.Scene({duration:5500,triggerElement: "#trigger-hdg-2",triggerHook: 'onEnter'})				
+					.setTween(lines)
+					.addTo(controller)
+					.addIndicators({name: "animate lines"});					
+*/
