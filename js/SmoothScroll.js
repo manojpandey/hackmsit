@@ -30,7 +30,7 @@ var defaultOptions = {
     pulseNormalize   : 1,
 
     // Acceleration
-    accelerationDelta : 50,  // 50
+    accelerationDelta : 25,  // 50
     accelerationMax   : 3,   // 3
 
     // Keyboard Settings
