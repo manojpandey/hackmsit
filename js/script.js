@@ -192,9 +192,6 @@ var scene = new ScrollMagic.Scene({
         duration: 0
     })
     .addTo(controller)
-    .addIndicators({
-        name: "first heading"
-    })
     .on("start", function(e) {
         if (e.scrollDirection == 'FORWARD') {
             if (ids[0] == 0) {
@@ -226,9 +223,6 @@ var scene = new ScrollMagic.Scene({
         duration: 0
     })
     .addTo(controller)
-    .addIndicators({
-        name: "second heading"
-    })
     .on("start", function(e) {
         if (e.scrollDirection == "FORWARD") {
             if (ids[1] == 0) {
@@ -261,9 +255,6 @@ var scene = new ScrollMagic.Scene({
         duration: 0
     })
     .addTo(controller)
-    .addIndicators({
-        name: "third heading"
-    })
     .on("start", function(e) {
         if (e.scrollDirection == "FORWARD") {
             if (ids[2] == 0) {
@@ -295,9 +286,6 @@ var scene = new ScrollMagic.Scene({
         duration: 0
     })
     .addTo(controller)
-    .addIndicators({
-        name: "fourth heading"
-    })
     .on("start", function(e) {
         if (e.scrollDirection == "FORWARD") {
             if (ids[3] == 0) {
@@ -329,9 +317,6 @@ var scene = new ScrollMagic.Scene({
         duration: 0
     })
     .addTo(controller)
-    .addIndicators({
-        name: "fifth heading"
-    })
     .on("start", function(e) {
         if (e.scrollDirection == "FORWARD") {
             if (ids[4] == 0) {
@@ -373,25 +358,16 @@ var scene = new ScrollMagic.Scene({
     })
     .setTween(gear1)
     .addTo(controller)
-    .addIndicators({
-        name: "animate gears"
-    });
 var scene = new ScrollMagic.Scene({
         duration: 10000
     })
     .setTween(gear2)
     .addTo(controller)
-    .addIndicators({
-        name: "animate gears"
-    });
 var scene = new ScrollMagic.Scene({
         duration: 10000
     })
     .setTween(gear3)
     .addTo(controller)
-    .addIndicators({
-        name: "animate gears"
-    });
 //info box animation
 $('.info-box').hover(
     function() {
@@ -454,9 +430,6 @@ var scene = new ScrollMagic.Scene({
     })
     .setTween(list1)
     .addTo(controller)
-    .addIndicators({
-        name: "animate list"
-    })
 var scene = new ScrollMagic.Scene({
         triggerElement: "#trigger-hdg-2",
         triggerHook: 'onEnter',
@@ -465,9 +438,6 @@ var scene = new ScrollMagic.Scene({
     })
     .setTween(list2)
     .addTo(controller)
-    .addIndicators({
-        name: "animate list"
-    })
     //animate faq box
 var faq = TweenMax.from($('.faq'), 0.8, {
     scale: 0.2,
@@ -482,9 +452,6 @@ var scene = new ScrollMagic.Scene({
     })
     .setTween(faq)
     .addTo(controller)
-    .addIndicators({
-        name: "animate faq"
-    })
     //animate sponsers logos
 var logo = TweenMax.staggerFrom($('.sponser-logo'), 0.8, {
     scale: 0.2,
@@ -499,9 +466,6 @@ var scene = new ScrollMagic.Scene({
     })
     .setTween(logo)
     .addTo(controller)
-    .addIndicators({
-        name: "animate logos"
-    })
     // lines animation
     /*
     var orig = document.querySelector('path'), length, timer;
@@ -514,5 +478,4 @@ var scene = new ScrollMagic.Scene({
     var scene = new ScrollMagic.Scene({duration:5500,triggerElement: "#trigger-hdg-2",triggerHook: 'onEnter'})				
     					.setTween(lines)
     					.addTo(controller)
-    					.addIndicators({name: "animate lines"});					
     */
