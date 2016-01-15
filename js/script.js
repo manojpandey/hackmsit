@@ -5,19 +5,15 @@
 
 var controller = new ScrollMagic.Controller();
 
-
-
 //animate sub headings code start -
 //------------------------------------------------------------------------------------------------
-function random_char()
-{
+function random_char(){
 	var string = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%&**';
 	var rndnum = Math.floor(Math.random() * 68);
 	return string.charAt(rndnum);
 }
 
-function random_string(len)
-{
+function random_string(len){
 	var i;
 	var string = '';
 
@@ -30,8 +26,7 @@ function random_string(len)
 
 }
 
-function return_arr(str)
-{
+function return_arr(str){
 	var i,j;
 	var array = [];
 	var len = str.length,tempstr = '';
@@ -66,15 +61,21 @@ function return_arr(str)
 
 	return array;
 }
+
 var timer = 20;
 var delay = 200;
 var ids = [0,0,0,0,0];
-var array = [[],[],[],[],[]];
+var array = [
+		[],
+		[],
+		[],
+		[],
+		[]
+];
 var counter = [0,0,0,0,0];
 
 
-function animate_heading_1(elem,reverse)
-{
+function animate_heading_1(elem,reverse){
 	reverse = reverse || false;
 	var $elem = $(elem);
 	if(reverse == false)
@@ -101,8 +102,7 @@ function animate_heading_1(elem,reverse)
 
 }
 
-function animate_heading_2(elem,reverse)
-{
+function animate_heading_2(elem,reverse){
 	reverse = reverse || false;
 	var $elem = $(elem);
 	if(reverse == false)
@@ -128,8 +128,7 @@ function animate_heading_2(elem,reverse)
 	}
 
 }
-function animate_heading_3(elem,reverse)
-{
+function animate_heading_3(elem,reverse){
 	reverse = reverse || false;
 	var $elem = $(elem);
 	if(reverse == false)
@@ -155,8 +154,7 @@ function animate_heading_3(elem,reverse)
 	}
 
 }
-function animate_heading_4(elem,reverse)
-{
+function animate_heading_4(elem,reverse){
 	reverse = reverse || false;
 	var $elem = $(elem);
 	if(reverse == false)
@@ -182,8 +180,7 @@ function animate_heading_4(elem,reverse)
 	}
 
 }
-function animate_heading_5(elem,reverse)
-{
+function animate_heading_5(elem,reverse){
 	reverse = reverse || false;
 	var $elem = $(elem);
 	if(reverse == false)
@@ -214,142 +211,182 @@ function animate_heading_5(elem,reverse)
 
 //.on parameters - change update progress start end enter leave
 //animate first headings
-var scene = new ScrollMagic.Scene({triggerElement: "#trigger-hdg-1",triggerHook: 'onEnter',offset: 50, duration: 0})
-					.addTo(controller)
-					.addIndicators({name: "first heading"})
-					.on("start", function (e) {	
-						if(e.scrollDirection == 'FORWARD')
-						{
-							if(ids[0] == 0)
-							{
-								counter[0] = 0
-								array[0] = return_arr('ABOUT')
-								setTimeout(function(){ids[0] = setInterval( function() { animate_heading_1('.sub-heading-1'); }, timer);},delay);
-							}
-						}
-						else if(e.scrollDirection == 'REVERSE')
-						{
-							if(ids[0] == 0)
-							{
-								array[0] = return_arr('ABOUT')
-								counter[0] = array[0].length;
-								setTimeout(function(){ids[0] = setInterval( function() { animate_heading_1('.sub-heading-1',true); }, timer);},delay);
-							}	
-						}
-					});
+var scene = new ScrollMagic.Scene({
+	triggerElement: "#trigger-hdg-1",
+	triggerHook: 'onEnter',
+	offset: 50,
+	duration: 0
+	})
+	.addTo(controller)
+	.addIndicators({name: "first heading"})
+	.on("start", function (e) {	
+		if(e.scrollDirection == 'FORWARD')
+		{
+			if(ids[0] == 0)
+			{
+				counter[0] = 0
+				array[0] = return_arr('ABOUT')
+				setTimeout(function(){ids[0] = setInterval( function() { animate_heading_1('.sub-heading-1'); }, timer);},delay);
+			}
+		}
+		else if(e.scrollDirection == 'REVERSE')
+		{
+			if(ids[0] == 0)
+			{
+				array[0] = return_arr('ABOUT')
+				counter[0] = array[0].length;
+				setTimeout(function(){ids[0] = setInterval( function() { animate_heading_1('.sub-heading-1',true); }, timer);},delay);
+			}	
+		}
+				});
 //animate second headings
-var scene = new ScrollMagic.Scene({triggerElement: "#trigger-hdg-2",triggerHook: 'onEnter',offset: 50, duration: 0})
-					.addTo(controller)
-					.addIndicators({name: "second heading"})
-					.on("start", function (e) {	
-						if(e.scrollDirection == "FORWARD")
-						{
-							if(ids[1] == 0)
-							{
-								counter[1] = 0
-								array[1] = return_arr('SCHEDULE')
-								setTimeout(function(){ids[1] = setInterval( function() { animate_heading_2('.sub-heading-2'); }, timer);},delay);
-							}
+var scene = new ScrollMagic.Scene({
+	triggerElement: "#trigger-hdg-2",
+	triggerHook: 'onEnter',
+	offset: 50,
+	duration: 0
+	})
+	.addTo(controller)
+	.addIndicators({name: "second heading"})
+	.on("start", function (e) {	
+		if(e.scrollDirection == "FORWARD")
+		{
+			if(ids[1] == 0)
+			{
+				counter[1] = 0
+				array[1] = return_arr('SCHEDULE')
+				setTimeout(function(){ids[1] = setInterval( function() { animate_heading_2('.sub-heading-2'); }, timer);},delay);
+			}
 
-						}
-						else if(e.scrollDirection == 'REVERSE')
-						{
-							if(ids[1] == 0)
-							{
-								array[1] = return_arr('SCHEDULE')
-								counter[1] = array[1].length;
-								setTimeout(function(){ids[1] = setInterval( function() { animate_heading_2('.sub-heading-2',true); }, timer);},delay);
-							}
-						}
-					});
+		}
+		else if(e.scrollDirection == 'REVERSE')
+		{
+			if(ids[1] == 0)
+			{
+				array[1] = return_arr('SCHEDULE')
+				counter[1] = array[1].length;
+				setTimeout(function(){ids[1] = setInterval( function() { animate_heading_2('.sub-heading-2',true); }, timer);},delay);
+			}
+		}
+				});
 //animate third headings
-var scene = new ScrollMagic.Scene({triggerElement: "#trigger-hdg-3",triggerHook: 'onEnter',offset: 50, duration: 0})
-					.addTo(controller)
-					.addIndicators({name: "third heading"})
-					.on("start", function (e) {	
-						if(e.scrollDirection == "FORWARD")
-						{
-							if(ids[2] == 0)
-							{
-								counter[2] = 0
-								array[2] = return_arr('FAQ')
-								setTimeout(function(){ids[2] = setInterval( function() { animate_heading_3('.sub-heading-3'); }, timer);},delay);	
-							}
-						}
-						else if(e.scrollDirection == 'REVERSE')
-						{
-							if(ids[2] == 0)
-							{
-								array[2] = return_arr('FAQ')
-								counter[2] = array[2].length;
-								setTimeout(function(){ids[2] = setInterval( function() { animate_heading_3('.sub-heading-3',true); }, timer);},delay);	
-							}
-						}
-					});
+var scene = new ScrollMagic.Scene({
+	triggerElement: "#trigger-hdg-3",
+	triggerHook: 'onEnter',
+	offset: 50,
+	duration: 0
+	})
+	.addTo(controller)
+	.addIndicators({name: "third heading"})
+	.on("start", function (e) {	
+		if(e.scrollDirection == "FORWARD")
+		{
+			if(ids[2] == 0)
+			{
+				counter[2] = 0
+				array[2] = return_arr('FAQ')
+				setTimeout(function(){ids[2] = setInterval( function() { animate_heading_3('.sub-heading-3'); }, timer);},delay);	
+			}
+		}
+		else if(e.scrollDirection == 'REVERSE')
+		{
+			if(ids[2] == 0)
+			{
+				array[2] = return_arr('FAQ')
+				counter[2] = array[2].length;
+				setTimeout(function(){ids[2] = setInterval( function() { animate_heading_3('.sub-heading-3',true); }, timer);},delay);	
+			}
+		}
+				});
 //animate fourth headings
-var scene = new ScrollMagic.Scene({triggerElement: "#trigger-hdg-4",triggerHook: 'onEnter',offset: 50, duration: 0})
-					.addTo(controller)
-					.addIndicators({name: "fourth heading"})
-					.on("start", function (e) {	
-						if(e.scrollDirection == "FORWARD")
-						{
-							if(ids[3] == 0)
-							{
-								counter[3] = 0
-								array[3] = return_arr('SPONSORS')
-								setTimeout(function(){ids[3] = setInterval( function() { animate_heading_4('.sub-heading-4'); }, timer);},delay);	
-							}
-						}
-						else if(e.scrollDirection == 'REVERSE')
-						{
-							if(ids[3] == 0)
-							{
-								array[3] = return_arr('SPONSORS')
-								counter[3] = array[3].length;
-								setTimeout(function(){ids[3] = setInterval( function() { animate_heading_4('.sub-heading-4',true); }, timer);},delay);	
-							}
-						}
-					});
+var scene = new ScrollMagic.Scene({
+	triggerElement: "#trigger-hdg-4",
+	triggerHook: 'onEnter',
+	offset: 50,
+	duration: 0
+	})
+	.addTo(controller)
+	.addIndicators({name: "fourth heading"})
+	.on("start", function (e) {	
+		if(e.scrollDirection == "FORWARD")
+		{
+			if(ids[3] == 0)
+			{
+				counter[3] = 0
+				array[3] = return_arr('SPONSORS')
+				setTimeout(function(){ids[3] = setInterval( function() { animate_heading_4('.sub-heading-4'); }, timer);},delay);	
+			}
+		}
+		else if(e.scrollDirection == 'REVERSE')
+		{
+			if(ids[3] == 0)
+			{
+				array[3] = return_arr('SPONSORS')
+				counter[3] = array[3].length;
+				setTimeout(function(){ids[3] = setInterval( function() { animate_heading_4('.sub-heading-4',true); }, timer);},delay);	
+			}
+		}
+				});
 //animate fifth headings
-var scene = new ScrollMagic.Scene({triggerElement: "#trigger-hdg-5",triggerHook: 'onEnter',offset: 50, duration: 0})
-					.addTo(controller)
-					.addIndicators({name: "fifth heading"})
-					.on("start", function (e) {	
-						if(e.scrollDirection == "FORWARD")
-						{
-							if(ids[4] == 0)
-							{
-								counter[4] = 0
-								array[4] = return_arr('CONTACT')
-								setTimeout(function(){ids[4] = setInterval( function() { animate_heading_5('.sub-heading-5'); }, timer);},delay);	
-							}
-						}
-						else if(e.scrollDirection == 'REVERSE')
-						{
-							if(ids[4] == 0)
-							{
-								array[4] = return_arr('CONTACT')
-								counter[4] = array[4].length;
-								setTimeout(function(){ids[4] = setInterval( function() { animate_heading_5('.sub-heading-5',true); }, timer);},delay);	
-							}
-						}
-					});		
+var scene = new ScrollMagic.Scene({
+	triggerElement: "#trigger-hdg-5",
+	triggerHook: 'onEnter',
+	offset: 50,
+	duration: 0
+	})
+	.addTo(controller)
+	.addIndicators({name: "fifth heading"})
+	.on("start", function (e) {	
+		if(e.scrollDirection == "FORWARD")
+		{
+			if(ids[4] == 0)
+			{
+				counter[4] = 0
+				array[4] = return_arr('CONTACT')
+				setTimeout(function(){ids[4] = setInterval( function() { animate_heading_5('.sub-heading-5'); }, timer);},delay);	
+			}
+		}
+		else if(e.scrollDirection == 'REVERSE')
+		{
+			if(ids[4] == 0)
+			{
+				array[4] = return_arr('CONTACT')
+				counter[4] = array[4].length;
+				setTimeout(function(){ids[4] = setInterval( function() { animate_heading_5('.sub-heading-5',true); }, timer);},delay);	
+			}
+		}
+				});		
 //gears animation
-var gear1 = TweenMax.to(".gear-big", 1, {rotation: 1000, ease: Sine.easeOut});
-var gear2 = TweenMax.to(".gear-small", 1, {rotation: -3000, ease: Sine.easeOut});
-var gear3 = TweenMax.to(".gear-med", 1, {rotation: 600, ease: Sine.easeOut});
-var scene = new ScrollMagic.Scene({duration:10000})				
-					.setTween(gear1)
-					.addTo(controller)
-					.addIndicators({name: "animate gears"});
-var scene = new ScrollMagic.Scene({duration:10000})				
-					.setTween(gear2)
-					.addTo(controller)
-					.addIndicators({name: "animate gears"});
-var scene = new ScrollMagic.Scene({duration:10000})				
-					.setTween(gear3)
-					.addTo(controller)
-					.addIndicators({name: "animate gears"});
+var gear1 = TweenMax.to(".gear-big", 1, {
+	rotation: 1000,
+	ease: Sine.easeOut
+});
+var gear2 = TweenMax.to(".gear-small", 1, {
+	rotation: -3000, 
+	ease: Sine.easeOut
+});
+var gear3 = TweenMax.to(".gear-med", 1, {
+	rotation: 600, 
+	ease: Sine.easeOut
+});
+var scene = new ScrollMagic.Scene({
+	duration:10000
+	})				
+	.setTween(gear1)
+	.addTo(controller)
+	.addIndicators({name: "animate gears"});
+var scene = new ScrollMagic.Scene({
+	duration:10000
+	})				
+	.setTween(gear2)
+	.addTo(controller)
+	.addIndicators({name: "animate gears"});
+var scene = new ScrollMagic.Scene({
+	duration:10000
+	})				
+	.setTween(gear3)
+	.addTo(controller)
+	.addIndicators({name: "animate gears"});
 //info box animation
 $('.info-box').hover(
 	function()
@@ -394,16 +431,38 @@ $('.info-text').hover(
 	}
 );	
 //animate schedule
-var list1 = TweenMax.staggerFrom(".animate-list-1 li", 2, {scale:0.5, opacity:0, delay:0.5, ease:Elastic.easeOut, force3D:true}, 0.2);
-var list2 = TweenMax.staggerFrom(".animate-list-2 li", 2, {scale:0.5, opacity:0, delay:0.5, ease:Elastic.easeOut, force3D:true}, 0.2);
-var scene = new ScrollMagic.Scene({triggerElement: "#trigger-hdg-2",triggerHook: 'onEnter',offset: 150, duration: 0})
-					.setTween(list1)
-					.addTo(controller)
-					.addIndicators({name: "animate list"})
-var scene = new ScrollMagic.Scene({triggerElement: "#trigger-hdg-2",triggerHook: 'onEnter',offset: 150, duration: 0})
-					.setTween(list2)
-					.addTo(controller)
-					.addIndicators({name: "animate list"})
+var list1 = TweenMax.staggerFrom(".animate-list-1 li", 2, {
+	scale:0.5,
+	opacity:0, 
+	delay:0.5, 
+	ease:Elastic.easeOut, 
+	force3D:true}, 
+	0.2);
+var list2 = TweenMax.staggerFrom(".animate-list-2 li", 2, {
+	scale:0.5, 
+	opacity:0, 
+	delay:0.5, 
+	ease:Elastic.easeOut, 
+	force3D:true},
+	0.2);
+var scene = new ScrollMagic.Scene({
+	triggerElement: "#trigger-hdg-2",
+	triggerHook: 'onEnter',
+	offset: 150,
+	duration: 0
+	})
+	.setTween(list1)
+	.addTo(controller)
+	.addIndicators({name: "animate list"})
+var scene = new ScrollMagic.Scene({
+	triggerElement: "#trigger-hdg-2",
+	triggerHook: 'onEnter',
+	offset: 150, 
+	duration: 0
+	})
+	.setTween(list2)
+	.addTo(controller)
+	.addIndicators({name: "animate list"})
 					
 // lines animation
 /*
