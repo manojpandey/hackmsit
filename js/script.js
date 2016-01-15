@@ -60,15 +60,16 @@ function return_arr(str) {
 
 var timer = 20;
 var delay = 200;
-var ids = [0, 0, 0, 0, 0];
+var ids = [0, 0, 0, 0, 0, 0];
 var array = [
+    [],
     [],
     [],
     [],
     [],
     []
 ];
-var counter = [0, 0, 0, 0, 0];
+var counter = [0, 0, 0, 0, 0, 0];
 
 
 function animate_heading_1(elem, reverse) {
@@ -177,6 +178,28 @@ function animate_heading_5(elem, reverse) {
         }
         $elem.html(array[4][counter[4]]);
         counter[4] -= 1;
+    }
+
+}
+
+function animate_heading_6(elem, reverse) {
+    reverse = reverse || false;
+    var $elem = $(elem);
+    if (reverse == false) {
+        if (counter[5] == array[5].length - 1) {
+            clearInterval(ids[5]);
+            //ids[4] = 0;
+        }
+        $elem.html(array[5][counter[5]])
+        counter[5] += 1
+    } else {
+        if (counter[5] < 0) {
+            $elem.html('');
+            clearInterval(ids[5]);
+            //ids[4] = 0;
+        }
+        $elem.html(array[5][counter[5]]);
+        counter[5] -= 1;
     }
 
 }
@@ -321,7 +344,7 @@ var scene = new ScrollMagic.Scene({
         if (e.scrollDirection == "FORWARD") {
             if (ids[4] == 0) {
                 counter[4] = 0
-                array[4] = return_arr('CONTACT')
+                array[4] = return_arr('OUR TEAM')
                 setTimeout(function() {
                     ids[4] = setInterval(function() {
                         animate_heading_5('.sub-heading-5');
@@ -330,11 +353,42 @@ var scene = new ScrollMagic.Scene({
             }
         } else if (e.scrollDirection == 'REVERSE') {
             if (ids[4] == 0) {
-                array[4] = return_arr('CONTACT')
-                counter[4] = array[4].length;
+                array[4] = return_arr('OUR TEAM')
+                counter[4] = array[5].length;
                 setTimeout(function() {
                     ids[4] = setInterval(function() {
                         animate_heading_5('.sub-heading-5', true);
+                    }, timer);
+                }, delay);
+            }
+        }
+    });
+//animate sixth headings
+var scene = new ScrollMagic.Scene({
+        triggerElement: "#trigger-hdg-6",
+        triggerHook: 'onEnter',
+        offset: 50,
+        duration: 0
+    })
+    .addTo(controller)
+    .on("start", function(e) {
+        if (e.scrollDirection == "FORWARD") {
+            if (ids[5] == 0) {
+                counter[5] = 0
+                array[5] = return_arr('CONTACT')
+                setTimeout(function() {
+                    ids[5] = setInterval(function() {
+                        animate_heading_6('.sub-heading-6');
+                    }, timer);
+                }, delay);
+            }
+        } else if (e.scrollDirection == 'REVERSE') {
+            if (ids[5] == 0) {
+                array[5] = return_arr('CONTACT')
+                counter[5] = array[5].length;
+                setTimeout(function() {
+                    ids[5] = setInterval(function() {
+                        animate_heading_6('.sub-heading-6', true);
                     }, timer);
                 }, delay);
             }
