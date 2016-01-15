@@ -250,6 +250,7 @@ var scene = new ScrollMagic.Scene({triggerElement: "#trigger-hdg-2",triggerHook:
 								array[1] = return_arr('SCHEDULE')
 								setTimeout(function(){ids[1] = setInterval( function() { animate_heading_2('.sub-heading-2'); }, timer);},delay);
 							}
+
 						}
 						else if(e.scrollDirection == 'REVERSE')
 						{
@@ -391,7 +392,19 @@ $('.info-text').hover(
 		$(this).stop(true,true).siblings('.info-heading').css('opacity','1');
 		$(this).stop(true,true).css('opacity','0');
 	}
-);					
+);	
+//animate schedule
+var list1 = TweenMax.staggerFrom(".animate-list-1 li", 2, {scale:0.5, opacity:0, delay:0.5, ease:Elastic.easeOut, force3D:true}, 0.2);
+var list2 = TweenMax.staggerFrom(".animate-list-2 li", 2, {scale:0.5, opacity:0, delay:0.5, ease:Elastic.easeOut, force3D:true}, 0.2);
+var scene = new ScrollMagic.Scene({triggerElement: "#trigger-hdg-2",triggerHook: 'onEnter',offset: 150, duration: 0})
+					.setTween(list1)
+					.addTo(controller)
+					.addIndicators({name: "animate list"})
+var scene = new ScrollMagic.Scene({triggerElement: "#trigger-hdg-2",triggerHook: 'onEnter',offset: 150, duration: 0})
+					.setTween(list2)
+					.addTo(controller)
+					.addIndicators({name: "animate list"})
+					
 // lines animation
 /*
 var orig = document.querySelector('path'), length, timer;

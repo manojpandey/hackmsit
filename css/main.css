@@ -172,6 +172,11 @@ body {
   background-color: #d96459;
   z-index: 2;
 }
+.outer-subpart-5
+{
+  background-color: #d96459;
+  z-index: 2;
+}
 
 .slant-2
 {
@@ -321,4 +326,17 @@ body {
 {
   padding-left: 65px;
   font-family: 'Aldrich', sans-serif; 
+}
+
+.map-border
+{
+  /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
+  z-index: 5;
+  margin-bottom: 0px;
+  /*border: 4px solid rgba(0,0,0,0.3)*/
+}
+
+.footer
+{
+  
 }
