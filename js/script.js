@@ -463,7 +463,18 @@ var scene = new ScrollMagic.Scene({
 	.setTween(list2)
 	.addTo(controller)
 	.addIndicators({name: "animate list"})
-					
+//animate faq box
+var faq = TweenMax.from($('.faq'), 0.8, {scale:0.2, autoAlpha:0, ease:Back.easeOut});
+var scene = new ScrollMagic.Scene({
+	triggerElement: "#trigger-hdg-3",
+	triggerHook: 'onEnter',
+	offset: 200, 
+	duration: 0
+	})
+	.setTween(faq)
+	.addTo(controller)
+	.addIndicators({name: "animate faq"})
+
 // lines animation
 /*
 var orig = document.querySelector('path'), length, timer;
