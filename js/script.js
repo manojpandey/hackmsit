@@ -464,7 +464,11 @@ var scene = new ScrollMagic.Scene({
 	.addTo(controller)
 	.addIndicators({name: "animate list"})
 //animate faq box
-var faq = TweenMax.from($('.faq'), 0.8, {scale:0.2, autoAlpha:0, ease:Back.easeOut});
+var faq = TweenMax.from($('.faq'), 0.8, {
+	scale:0.2, 
+	autoAlpha:0, 
+	ease:Back.easeOut
+});
 var scene = new ScrollMagic.Scene({
 	triggerElement: "#trigger-hdg-3",
 	triggerHook: 'onEnter',
@@ -474,7 +478,21 @@ var scene = new ScrollMagic.Scene({
 	.setTween(faq)
 	.addTo(controller)
 	.addIndicators({name: "animate faq"})
-
+//animate sponsers logos
+var logo = TweenMax.staggerFrom($('.sponser-logo'), 0.8, {
+	scale:0.2, 
+	autoAlpha:0, 
+	ease:Back.easeOut
+});
+var scene = new ScrollMagic.Scene({
+	triggerElement: "#trigger-hdg-4",
+	triggerHook: 'onEnter',
+	offset: 150, 
+	duration: 0
+	})
+	.setTween(logo)
+	.addTo(controller)
+	.addIndicators({name: "animate logos"})
 // lines animation
 /*
 var orig = document.querySelector('path'), length, timer;
