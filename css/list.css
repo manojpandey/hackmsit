@@ -1,16 +1,16 @@
-.custom-list{
+.custom-list {
     counter-reset: li;
-    list-style: none; 
-    *list-style: decimal; 
+    list-style: none;
+    *list-style: decimal;
     font-family: 'Aldrich', sans-serif;
     font-size: 20px;
     /*padding: 0;*/
     /*opacity: 0;*/
     margin-bottom: 4em;
-    text-shadow: 0 1px 0 rgba(255,255,255,.5);
+    text-shadow: 0 1px 0 rgba(255, 255, 255, .5);
 }
 
-.rectangle-list span{
+.rectangle-list span {
     position: relative;
     display: block;
     padding: .4em .4em .4em .8em;
@@ -19,17 +19,17 @@
     background: #ddd;
     color: #444;
     text-decoration: none;
-    transition: all .3s ease-out;   
+    transition: all .3s ease-out;
 }
 
-.rectangle-list span:hover{
+.rectangle-list span:hover {
     background: #eee;
-}   
+}
 
-.rectangle-list span:before{
+.rectangle-list span:before {
     content: counter(li);
     counter-increment: li;
-    position: absolute; 
+    position: absolute;
     left: -2.5em;
     top: 50%;
     margin-top: -1em;
@@ -41,23 +41,23 @@
     font-weight: bold;
 }
 
-.rectangle-list span:after{
-    position: absolute; 
+.rectangle-list span:after {
+    position: absolute;
     content: '';
     border: .5em solid transparent;
     left: -1em;
     top: 50%;
     margin-top: -.5em;
-    transition: all .3s ease-out;               
+    transition: all .3s ease-out;
 }
 
-.rectangle-list span:hover:after{
+.rectangle-list span:hover:after {
     left: -.5em;
-    border-left-color: #fa8072;             
+    border-left-color: #fa8072;
 }
 
-.list-heading{
-    width:100%;
+.list-heading {
+    width: 100%;
     padding-left: 40px;
     text-align: center;
     font-size: 35px;
