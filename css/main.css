@@ -33,6 +33,7 @@
 body,
 html {
     height: 100%;
+
 }
 
 .hvr-underline-reveal:before {
@@ -223,8 +224,9 @@ html {
 }
 
 .gear-med {
+  border: 1px solid black;
     top: 800px;
-    right: 45px;
+    right: 55px;
 }
 
 .info-outer {
