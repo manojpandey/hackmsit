@@ -1,3 +1,22 @@
+body,
+html {
+    height: 100%;
+    width: 100%;
+}
+
+.intro {
+    height: 100%;
+    width: 100%;
+    display: table;
+}
+
+.intro-body {
+    height: 100%;
+    width: 100%;
+    display: table-cell;
+    vertical-align: middle;
+}
+
 .nopadding {
     padding: 0 !important;
     margin: 0 !important;
@@ -28,12 +47,6 @@
     .navbar .navbar-collapse {
         text-align: center;
     }
-}
-
-body,
-html {
-    height: 100%;
-
 }
 
 .hvr-underline-reveal:before {
@@ -224,7 +237,7 @@ html {
 }
 
 .gear-med {
-  border: 1px solid black;
+    border: 1px solid black;
     top: 800px;
     right: 55px;
 }
