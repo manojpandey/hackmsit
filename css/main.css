@@ -509,11 +509,24 @@ html {
     padding-left: 4.063em;
     font-family: 'Aldrich', sans-serif;
 }
-.sponser-logo{
+
+.sponser-logo {
     height: 260px;
     /*width: 500px;*/
 }
 
+.team-image img {
+    border-radius: 50%;
+    border: 1px solid black;
+}
+
+.team-image h4 {
+    font-family: 'Aldrich', sans-serif;
+}
+
+.team-image p {
+    font-family: 'Aldrich', sans-serif;
+}
 
 .map-border {
     height: 31.250em;
@@ -559,6 +572,10 @@ html {
     text-align: right;
 }
 
+.gdg {
+    margin-top: -80px;
+}
+
 
 /*media queries*/
 
@@ -598,17 +615,13 @@ html {
     .pull-right {
         text-align: center;
     }
-}
-
-
-/*even smaller devices (iphone 4,5)*/
-
-@media only screen and (max-width: 480px) {
-    .intro {
-        font-size: 7px
+    .sponser-logo {
+        height: 100px;
+    }
+    .gdg {
+        margin-top: 0px;
     }
 }
-
 
 /* Extra Small Devices, Phones */
 
@@ -645,5 +658,20 @@ html {
     .gear-med {
         top: 1580px;
         right: 55px;
+    }
+    .sponser-logo {
+        height: 100px;
+    }
+    .gdg {
+        margin-top: 0px;
+    }
+}
+
+
+/*even smaller devices (iphone 4,5)*/
+
+@media only screen and (max-width: 320px) {
+    .intro {
+        font-size: 7px
     }
 }

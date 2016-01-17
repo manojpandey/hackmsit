@@ -7,14 +7,14 @@ var controller = new ScrollMagic.Controller();
 
 //strech all triangle to 100% width
 var w = document.documentElement.clientWidth;
-$('.triangle-1').css('border-width',' 0 '+ w +'px 100px 0');
-$('.triangle-2').css('border-width','100px 0 0 ' + w + 'px');
-$('.triangle-3').css('border-width','100px ' + w + 'px 0 0');
-$('.triangle-4').css('border-width','0 ' + w + 'px 100px 0');
-$('.triangle-5').css('border-width','100px 0 0 ' + w + 'px');
-$('.triangle-6').css('border-width','0 0 100px ' + w + 'px');
-$('.triangle-8').css('border-width','100px ' + w + 'px 0 0');
-$('.triangle-7').css('border-width','0 ' + w + 'px 100px 0');
+$('.triangle-1').css('border-width', ' 0 ' + w + 'px 100px 0');
+$('.triangle-2').css('border-width', '100px 0 0 ' + w + 'px');
+$('.triangle-3').css('border-width', '100px ' + w + 'px 0 0');
+$('.triangle-4').css('border-width', '0 ' + w + 'px 100px 0');
+$('.triangle-5').css('border-width', '100px 0 0 ' + w + 'px');
+$('.triangle-6').css('border-width', '0 0 100px ' + w + 'px');
+$('.triangle-8').css('border-width', '100px ' + w + 'px 0 0');
+$('.triangle-7').css('border-width', '0 ' + w + 'px 100px 0');
 
 
 // highlight nav text on mouseover
@@ -564,17 +564,33 @@ var scene = new ScrollMagic.Scene({
     .addTo(controller)
     //animate sponsers logos
 var logo = TweenMax.staggerFrom($('.sponser-logo'), 0.8, {
-    scale: 0.2,
-    autoAlpha: 0,
-    ease: Back.easeOut
-});
+        scale: 0.2,
+        autoAlpha: 0,
+        ease: Back.easeOut
+    },
+    0.2);
 var scene = new ScrollMagic.Scene({
         triggerElement: "#trigger-hdg-4",
         triggerHook: 'onEnter',
-        offset: 150,
+        offset: 550,
         duration: 0
     })
     .setTween(logo)
+    .addTo(controller)
+    // animate team
+var team = TweenMax.staggerFrom($('.team'), 0.8, {
+        scale: 0.2,
+        autoAlpha: 0,
+        ease: Back.easeOut
+    },
+    0.2);
+var scene = new ScrollMagic.Scene({
+        triggerElement: "#trigger-hdg-5",
+        triggerHook: 'onEnter',
+        offset: 250,
+        duration: 0
+    })
+    .setTween(team)
     .addTo(controller)
     // lines animation
     /*

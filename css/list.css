@@ -1,8 +1,10 @@
 /*Schedule list*/
-.custom-padding{
+
+.custom-padding {
     padding-left: 15px;
     padding-right: 15px;
 }
+
 .custom-list {
     counter-reset: li;
     list-style: none;
