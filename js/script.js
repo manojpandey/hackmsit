@@ -41,12 +41,12 @@ function return_arr(str) {
     }
 
     for (i = 0; i < len; i++) {
-        for (j = 1; j <= 3; j++) {
+        for (j = 1; j <= 2; j++) {
             tempstr = str.substring(0, i) + random_string(len - i - 1);
             array.push(tempstr);
-            tempstr = str.substring(0, i) + random_string(len - i - 1);
+            /*tempstr = str.substring(0, i) + random_string(len - i - 1);
             array.push(tempstr);
-
+*/
         }
     }
 
@@ -58,7 +58,7 @@ function return_arr(str) {
     return array;
 }
 
-var timer = 20;
+var timer = 30;
 var delay = 0;
 var ids = [0, 0, 0, 0, 0, 0];
 var array = [
