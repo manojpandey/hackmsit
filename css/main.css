@@ -1,5 +1,3 @@
-
-
 /*----------------------------------------------------------------------------------------------------*/
 
 
@@ -78,9 +76,7 @@
 
 
 /*-------------------------------end schedule list-------------------------------------*/
-.t {
-    overflow-x: hidden;
-}
+
 body,
 html {
     height: 100%;
@@ -595,8 +591,8 @@ html {
         font-size: 11px
     }
     .pull-right {
-    text-align: center;
-}
+        text-align: center;
+    }
 }
 
 
@@ -622,6 +618,6 @@ html {
         font-size: 9px
     }
     .pull-right {
-    text-align: center;
-}
+        text-align: center;
+    }
 }

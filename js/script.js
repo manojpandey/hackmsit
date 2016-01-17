@@ -6,7 +6,7 @@
 var controller = new ScrollMagic.Controller();
 
 //strech all triangle to 100% width
-var w = screen.width;
+var w = document.documentElement.clientWidth;
 $('.triangle-1').css('border-width',' 0 '+ w +'px 100px 0');
 $('.triangle-2').css('border-width','100px 0 0 ' + w + 'px');
 $('.triangle-3').css('border-width','100px ' + w + 'px 0 0');
