@@ -620,4 +620,16 @@ html {
     .pull-right {
         text-align: center;
     }
+    .gear-big {
+        top: 750px;
+        left: 20px;
+    }
+    .gear-small {
+        top: 902px;
+        left: -42px;
+    }
+    .gear-med {
+        top: 1580px;
+        right: 55px;
+    }
 }
