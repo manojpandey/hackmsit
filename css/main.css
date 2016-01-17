@@ -77,37 +77,37 @@ html {
 .heading {
     color: white;
     font-family: 'Aldrich', sans-serif;
-    font-size: 80px;
+    font-size: 5.000em;
     /*0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff,  0 0 70px #fff, 0 0 80px #fff  , 0 0 100px #fff, 0 0 150px #fff*/
-    text-shadow: 0 0 5px #fff, 0 0 10px #fff;
+    text-shadow: 0 0 0.313em #fff, 0 0 0.625em #fff;
     /*text-shadow: 0 0 20px #ff0;*/
 }
 
 .heading-2 {
     color: #d96459;
-    text-shadow: 0 0 5px #d96459, 0 0 10px #d96459;
+    text-shadow: 0 0 0.313em #d96459, 0 0 0.625em #d96459;
 }
 
 .sub-heading {
     font-family: 'Share Tech Mono', sans-serif;
-    font-size: 22px;
+    font-size: 1.375em;
     color: #588c7e;
 }
 
 .logo-back {
     position: absolute;
-    height: 200px;
-    width: 200px;
+    height: 12.500em;
+    width: 12.500em;
     transform: scale(1.5, 1.5);
     /*opacity: 0.8;*/
-    filter: blur(4px) brightness(80%);
-    -webkit-filter: blur(4px) brightness(80%);
+    filter: blur(0.250em) brightness(80%);
+    -webkit-filter: blur(0.250em) brightness(80%);
     /*border: 1px solid black;*/
 }
 
 .logo {
-    height: 200px;
-    width: 200px;
+    height: 12.500em;
+    width: 12.500em;
     transform: scale(1.5, 1.5);
     opacity: 0.8;
     filter: brightness(180%);
@@ -116,22 +116,23 @@ html {
 }
 
 .register-btn {
-    letter-spacing: 2px;
-    font-size: 24px;
+    letter-spacing: 0.125em;
+    font-size: 1.500em;
     font-family: 'Aldrich', sans-serif;
     font-weight: 300;
-    padding-top: 1.6rem;
+    padding-top: 1.3rem;
+    padding-bottom: 1.0rem;
     /*background: #0D6;*/
     background-color: #d96459;
-    border: 1px solid #d96459;
+    border: 0.063em solid #d96459;
     line-height: 1.375;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
     font-weight: 700;
     color: black;
     cursor: pointer;
-    height: 60px;
-    width: 220px;
+    /*height: 3.750em;
+    width: 13.750em;*/
 }
 
 .head-tags {
@@ -206,40 +207,41 @@ html {
     margin-top: 90px;
 }
 
-.subpart-1 {
-    font-size: 24px;
+.subpart-1-text {
+    font-size: 1.500em;
     /*font-family: 'Share Tech Mono', sans-serif;*/
     font-family: 'Aldrich', sans-serif;
 }
 
 .subpart-2 {
     position: relative;
-    /*overflow-x: hidden;*/
+    overflow-x: hidden;
 }
 
 .gear {
     position: absolute;
     height: 250px;
     width: 250px;
+    /*border: 1px solid black;*/
     overflow-x: hidden;
     z-index: -20;
     opacity: 0.8;
 }
 
 .gear-big {
-    top: 530px;
-    left: 50px;
+    top: 54%;
+    left: 2%;
 }
 
 .gear-small {
-    top: 682px;
-    left: -12px;
+    top: 70%;
+    left: -3%;
 }
 
 .gear-med {
     /*border: 1px solid black;*/
-    top: 800px;
-    right: 55px;
+    top: 82%;
+    right: 5%;
 }
 
 .info-outer {
@@ -247,17 +249,17 @@ html {
 }
 
 .info-box {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    height: 300px;
-    width: 300px;
+    box-shadow: 0 0.250em 0.500em 0 rgba(0, 0, 0, 0.2), 0 0.375em 1.250em 0 rgba(0, 0, 0, 0.19);
+    height: 18.750em;
+    width: 18.750em;
     background-color: white;
-    border-width: 300px;
+    border-width: 18.750em;
     border-color: rgba(0, 0, 0, 0);
     opacity: 0.85;
     border-radius: 0;
     -moz-border-radius: 0;
     -webkit-border-radius: 0;
-    border: 150px dotted rgba(0, 0, 0, 0.7);
+    border: 9.375em dotted rgba(0, 0, 0, 0.7);
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -271,40 +273,40 @@ html {
 .info-box-animate {
     border-width: 0;
     border-color: rgba(0, 0, 0, 0.5);
-    border: 0px dashed rgba(0, 0, 0, 0.7);
+    border: 0em dashed rgba(0, 0, 0, 0.7);
 }
 
 .info-border {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 0.250em 0.500em 0 rgba(0, 0, 0, 0.2), 0 0.375em 1.250em 0 rgba(0, 0, 0, 0.19);
     display: inline-block;
     position: relative;
     z-index: 5;
-    margin-left: 10px;
-    margin-right: 10px;
-    width: 320px;
-    border: 10px solid rgba(0, 0, 0, 0.3)
+    margin-left: 0.625em;
+    margin-right: 0.625em;
+    width: 20.000em;
+    border: 0.625em solid rgba(0, 0, 0, 0.3)
 }
 
 .info-heading {
     z-index: 10;
     width: 100%;
     text-align: center;
-    top: 110px;
+    top: 36%;
     position: absolute;
-    letter-spacing: 2px;
-    font-size: 54px;
+    letter-spacing: 0.125em;
+    font-size: 3.375em;
     font-family: 'Share Tech Mono', sans-serif;
     font-weight: 300;
 }
 
 .info-text {
     z-index: 9;
-    width: 280px;
-    left: 10px;
+    /*width: 15.625em;*/
+    left: 10%;
     opacity: 0;
     text-align: center;
-    top: 30px;
-    font-size: 30px;
+    top: 1.875em;
+    font-size: 1.875em;
     position: absolute;
     font-family: 'Aldrich', sans-serif;
 }
@@ -313,23 +315,25 @@ html {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border: 3px solid rgba(0, 0, 0, 0.3);
     padding-right: 50px;
-    padding-left: 50px;
+    padding-left: 3.125em;
     /*background-color: white;*/
 }
 
 .faq-q {
     cursor: pointer;
     padding-top: 5px;
-    font-size: 20px;
+    font-size: 1.250em;
     font-family: 'Share Tech Mono', sans-serif;
 }
 
 .faq-a {
-    padding-left: 65px;
+    padding-left: 4.063em;
     font-family: 'Aldrich', sans-serif;
 }
 
 .map-border {
+    height: 31.250em;
+    width: 31.250em;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     z-index: 5;
     margin-bottom: 0px;

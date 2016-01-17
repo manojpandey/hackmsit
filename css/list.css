@@ -1,12 +1,15 @@
 /*Schedule list*/
-
+.custom-padding{
+    padding-left: 15px;
+    padding-right: 15px;
+}
 .custom-list {
     counter-reset: li;
     list-style: none;
     *list-style: decimal;
     font-family: 'Aldrich', sans-serif;
     font-size: 20px;
-    /*padding: 0;*/
+    padding-left: 0;
     /*opacity: 0;*/
     margin-bottom: 4em;
     text-shadow: 0 1px 0 rgba(255, 255, 255, .5);
@@ -60,7 +63,7 @@
 
 .list-heading {
     width: 100%;
-    padding-left: 40px;
+    /*padding-left: 40px;*/
     text-align: center;
     font-size: 35px;
     font-family: 'Share Tech Mono', sans-serif;

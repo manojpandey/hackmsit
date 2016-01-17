@@ -59,7 +59,7 @@ function return_arr(str) {
 }
 
 var timer = 20;
-var delay = 200;
+var delay = 0;
 var ids = [0, 0, 0, 0, 0, 0];
 var array = [
     [],
@@ -211,7 +211,7 @@ function animate_heading_6(elem, reverse) {
 var scene = new ScrollMagic.Scene({
         triggerElement: "#trigger-hdg-1",
         triggerHook: 'onEnter',
-        offset: 50,
+        offset: 150,
         duration: 0
     })
     .addTo(controller)
@@ -242,7 +242,7 @@ var scene = new ScrollMagic.Scene({
 var scene = new ScrollMagic.Scene({
         triggerElement: "#trigger-hdg-2",
         triggerHook: 'onEnter',
-        offset: 50,
+        offset: 150,
         duration: 0
     })
     .addTo(controller)
@@ -274,7 +274,7 @@ var scene = new ScrollMagic.Scene({
 var scene = new ScrollMagic.Scene({
         triggerElement: "#trigger-hdg-3",
         triggerHook: 'onEnter',
-        offset: 50,
+        offset: 150,
         duration: 0
     })
     .addTo(controller)
@@ -305,7 +305,7 @@ var scene = new ScrollMagic.Scene({
 var scene = new ScrollMagic.Scene({
         triggerElement: "#trigger-hdg-4",
         triggerHook: 'onEnter',
-        offset: 50,
+        offset: 150,
         duration: 0
     })
     .addTo(controller)
@@ -336,7 +336,7 @@ var scene = new ScrollMagic.Scene({
 var scene = new ScrollMagic.Scene({
         triggerElement: "#trigger-hdg-5",
         triggerHook: 'onEnter',
-        offset: 50,
+        offset: 150,
         duration: 0
     })
     .addTo(controller)
@@ -367,7 +367,7 @@ var scene = new ScrollMagic.Scene({
 var scene = new ScrollMagic.Scene({
         triggerElement: "#trigger-hdg-6",
         triggerHook: 'onEnter',
-        offset: 50,
+        offset: 150,
         duration: 0
     })
     .addTo(controller)
