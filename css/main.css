@@ -1,3 +1,86 @@
+
+
+/*----------------------------------------------------------------------------------------------------*/
+
+
+/*Schedule list*/
+
+.custom-padding {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.custom-list {
+    counter-reset: li;
+    list-style: none;
+    *list-style: decimal;
+    font-family: 'Aldrich', sans-serif;
+    font-size: 20px;
+    padding-left: 0;
+    /*opacity: 0;*/
+    margin-bottom: 4em;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, .5);
+}
+
+.rectangle-list span {
+    position: relative;
+    display: block;
+    padding: .4em .4em .4em .8em;
+    *padding: .4em;
+    margin: .5em 0 .5em 2.5em;
+    background: #ddd;
+    color: #444;
+    text-decoration: none;
+    transition: all .3s ease-out;
+}
+
+.rectangle-list span:hover {
+    background: #eee;
+}
+
+.rectangle-list span:before {
+    content: counter(li);
+    counter-increment: li;
+    position: absolute;
+    left: -2.5em;
+    top: 50%;
+    margin-top: -1em;
+    background: #fa8072;
+    height: 2em;
+    width: 2em;
+    line-height: 2em;
+    text-align: center;
+    font-weight: bold;
+}
+
+.rectangle-list span:after {
+    position: absolute;
+    content: '';
+    border: .5em solid transparent;
+    left: -1em;
+    top: 50%;
+    margin-top: -.5em;
+    transition: all .3s ease-out;
+}
+
+.rectangle-list span:hover:after {
+    left: -.5em;
+    border-left-color: #fa8072;
+}
+
+.list-heading {
+    width: 100%;
+    /*padding-left: 40px;*/
+    text-align: center;
+    font-size: 35px;
+    font-family: 'Share Tech Mono', sans-serif;
+}
+
+
+/*-------------------------------end schedule list-------------------------------------*/
+.t {
+    overflow-x: hidden;
+}
 body,
 html {
     height: 100%;
@@ -8,6 +91,7 @@ html {
     height: 100%;
     width: 100%;
     display: table;
+    font-size: 16px;
 }
 
 .intro-body {
@@ -36,17 +120,6 @@ html {
 
 .nav-text {
     font-family: 'Aldrich', sans-serif;
-}
-
-@media (min-width: 768px) {
-    .navbar .navbar-nav {
-        display: inline-block;
-        float: none;
-        vertical-align: top;
-    }
-    .navbar .navbar-collapse {
-        text-align: center;
-    }
 }
 
 .hvr-underline-reveal:before {
@@ -166,7 +239,7 @@ html {
 }
 
 .outer-subpart-2 {
-    margin-top: 150px;
+    margin-top: 200px;
     padding-bottom: 30px;
     background-color: #588c7e;
     z-index: 2;
@@ -218,11 +291,11 @@ html {
     overflow-x: hidden;
 }
 
-.gear {
+
+/*.gear {
     position: absolute;
     height: 250px;
     width: 250px;
-    /*border: 1px solid black;*/
     overflow-x: hidden;
     z-index: -20;
     opacity: 0.8;
@@ -239,9 +312,117 @@ html {
 }
 
 .gear-med {
-    /*border: 1px solid black;*/
     top: 82%;
     right: 5%;
+}
+*/
+
+.gear {
+    position: absolute;
+    height: 250px;
+    width: 250px;
+    overflow-x: hidden;
+    z-index: -20;
+    opacity: 0.8;
+}
+
+.gear-big {
+    top: 530px;
+    left: 50px;
+}
+
+.gear-small {
+    top: 682px;
+    left: -12px;
+}
+
+.gear-med {
+    top: 730px;
+    right: 85px;
+}
+
+.triangle-1 {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 100px 1000px 0;
+    border-color: transparent #588c7e transparent transparent;
+}
+
+.triangle-2 {
+    position: absolute;
+    margin-top: 100px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 100px 0 0 1000px;
+    border-color: transparent transparent transparent #588c7e;
+}
+
+.triangle-3 {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 100px 1000px 0 0;
+    border-color: #588c7e transparent transparent transparent;
+}
+
+.triangle-4 {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 1000px 100px 0;
+    border-color: transparent #d96459 transparent transparent;
+}
+
+.triangle-5 {
+    margin-top: 90px;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 100px 0 0 1000px;
+    border-color: transparent transparent transparent #588c7e;
+}
+
+.triangle-6 {
+    margin-top: 90px;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 100px 1000px;
+    border-color: transparent transparent #d96459 transparent;
+}
+
+.triangle-7 {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 1000px 100px 0;
+    border-color: transparent #588c7e transparent transparent;
+}
+
+.triangle-8 {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 100px 1000px 0 0;
+    border-color: #d96459 transparent transparent transparent;
+}
+
+.shadow {
+    /*z-index: -10;
+    filter: drop-shadow(0 0 16px rgba(50, 50, 50, 0.75));
+    /*filter: drop-shadow(0 0 16px rgba(41, 34, 73, 0.75));*/
+    /*-webkit-filter: drop-shadow(0 0 16px rgba(50, 50, 50, 0.75));*/
+    /*-webkit-filter: drop-shadow(0 0 16px rgba(41, 34, 73, 0.75));*/
+    */
 }
 
 .info-outer {
@@ -283,6 +464,8 @@ html {
     z-index: 5;
     margin-left: 0.625em;
     margin-right: 0.625em;
+    margin-top: 0.625em;
+    margin-bottom: 0.625em;
     width: 20.000em;
     border: 0.625em solid rgba(0, 0, 0, 0.3)
 }
@@ -373,4 +556,72 @@ html {
 
 .pull-right {
     text-align: right;
+}
+
+
+/*media queries*/
+
+@media (min-width: 768px) {
+    .navbar .navbar-nav {
+        display: inline-block;
+        float: none;
+        vertical-align: top;
+    }
+    .navbar .navbar-collapse {
+        text-align: center;
+    }
+}
+
+
+/* Small Devices, Tablets */
+
+@media only screen and (max-width: 768px) {
+    .intro {
+        font-size: 16px
+    }
+    .subpart-1 {
+        font-size: 13px
+    }
+    .info-outer {
+        font-size: 11px
+    }
+    .footer-text {
+        font-size: 12px
+    }
+    .faq {
+        font-size: 12px
+    }
+    .map {
+        font-size: 11px
+    }
+    .pull-right {
+    text-align: center;
+}
+}
+
+
+/* Extra Small Devices, Phones */
+
+@media only screen and (max-width: 480px) {
+    .intro {
+        font-size: 9px
+    }
+    .subpart-1 {
+        font-size: 11px
+    }
+    .info-outer {
+        font-size: 14px
+    }
+    .footer-text {
+        font-size: 7px
+    }
+    .faq {
+        font-size: 10px
+    }
+    .map {
+        font-size: 9px
+    }
+    .pull-right {
+    text-align: center;
+}
 }

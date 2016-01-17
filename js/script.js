@@ -5,6 +5,62 @@
 
 var controller = new ScrollMagic.Controller();
 
+//strech all triangle to 100% width
+var w = screen.width;
+$('.triangle-1').css('border-width',' 0 '+ w +'px 100px 0');
+$('.triangle-2').css('border-width','100px 0 0 ' + w + 'px');
+$('.triangle-3').css('border-width','100px ' + w + 'px 0 0');
+$('.triangle-4').css('border-width','0 ' + w + 'px 100px 0');
+$('.triangle-5').css('border-width','100px 0 0 ' + w + 'px');
+$('.triangle-6').css('border-width','0 0 100px ' + w + 'px');
+$('.triangle-8').css('border-width','100px ' + w + 'px 0 0');
+$('.triangle-7').css('border-width','0 ' + w + 'px 100px 0');
+
+
+// highlight nav text on mouseover
+$('.nav-text').mouseenter(
+    function() {
+        $(this).addClass('active')
+    }
+).mouseleave(
+    function() {
+        $(this).removeClass('active')
+    }
+);
+
+// fix navbar to top after scroll
+$(document).ready(
+    function() {
+
+        var pos = $('.navbar').offset();
+        $(window).bind('scroll',
+            function() {
+                if ($(window).scrollTop() > pos.top) {
+                    $('.navbar').addClass('navbar-fixed-top');
+                    //$('.outer-subpart-1').addClass('add-padding');
+                } else {
+                    $('.navbar').removeClass('navbar-fixed-top');
+                    //$('.outer-subpart-1').removeClass('add-padding');
+                }
+            }
+        );
+    }
+);
+
+//faq animation
+$('.q-btn').on('click',
+    function(e) {
+        $(this).parent().find('.collapse').collapse('toggle');
+        if ($(this).find('.fa').hasClass('fa-angle-down') == true) {
+            $(this).find('.fa').removeClass('fa-angle-down');
+            $(this).find('.fa').addClass('fa-angle-up');
+        } else if ($(this).find('.fa').hasClass('fa-angle-up') == true) {
+            $(this).find('.fa').removeClass('fa-angle-up');
+            $(this).find('.fa').addClass('fa-angle-down');
+        }
+    }
+);
+
 //animate sub headings code start -
 //------------------------------------------------------------------------------------------------
 function random_char() {
@@ -422,7 +478,7 @@ var scene = new ScrollMagic.Scene({
     })
     .setTween(gear3)
     .addTo(controller)
-//info box animation
+    //info box animation
 $('.info-box').hover(
     function() {
         $(this).addClass('info-box-animate');
@@ -529,7 +585,7 @@ var scene = new ScrollMagic.Scene({
       orig.style.strokeDasharray = [obj.length,obj.pathLength].join(' ');
       //updateSlider();
     }
-    var scene = new ScrollMagic.Scene({duration:5500,triggerElement: "#trigger-hdg-2",triggerHook: 'onEnter'})				
-    					.setTween(lines)
-    					.addTo(controller)
+    var scene = new ScrollMagic.Scene({duration:5500,triggerElement: "#trigger-hdg-2",triggerHook: 'onEnter'})              
+                        .setTween(lines)
+                        .addTo(controller)
     */
