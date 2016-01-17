@@ -509,6 +509,11 @@ html {
     padding-left: 4.063em;
     font-family: 'Aldrich', sans-serif;
 }
+.sponser-logo{
+    height: 260px;
+    /*width: 500px;*/
+}
+
 
 .map-border {
     height: 31.250em;
