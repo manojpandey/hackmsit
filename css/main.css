@@ -572,10 +572,6 @@ html {
     text-align: right;
 }
 
-.gdg {
-    margin-top: -80px;
-}
-
 
 /*media queries*/
 
@@ -587,6 +583,22 @@ html {
     }
     .navbar .navbar-collapse {
         text-align: center;
+    }
+    .tst {
+        height: 270px;
+        margin-top: 25px;
+    }
+    .gdg {
+        height: 300px;
+        padding-left: 50px;
+    }
+    .insedge {
+        margin-top: 30px;
+        height: 250px;
+        padding-left: 180px;
+    }
+    .hrank {
+        height: 300px;
     }
 }
 
@@ -617,11 +629,16 @@ html {
     }
     .sponser-logo {
         height: 100px;
+        margin-bottom: 30px;
     }
-    .gdg {
-        margin-top: 0px;
+    .hrank {
+        margin-bottom: 0px;
+    }
+    .tst {
+        margin-bottom: 0px;
     }
 }
+
 
 /* Extra Small Devices, Phones */
 
@@ -661,9 +678,13 @@ html {
     }
     .sponser-logo {
         height: 100px;
+        margin-bottom: 30px;
     }
-    .gdg {
-        margin-top: 0px;
+    .hrank {
+        margin-bottom: 0px;
+    }
+    .tst {
+        margin-bottom: 0px;
     }
 }
 
