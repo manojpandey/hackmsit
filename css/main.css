@@ -463,7 +463,7 @@ html {
     margin-top: 0.625em;
     margin-bottom: 0.625em;
     width: 20.000em;
-    border: 0.625em solid rgba(0, 0, 0, 0.3)
+    border: 0.625em solid rgba(0, 0, 0, 0.3);
 }
 
 .info-heading {
@@ -476,6 +476,7 @@ html {
     font-size: 3.375em;
     font-family: 'Share Tech Mono', sans-serif;
     font-weight: 300;
+    color: #fff;
 }
 
 .info-text {
@@ -538,7 +539,7 @@ html {
 }
 
 .footer {
-    height: 50px;
+    height: 55px;
     padding-top: 15px;
     /*padding-bottom: 20px;*/
 }
@@ -568,10 +569,13 @@ html {
     padding-left: 60px;
 }
 
-.pull-right {
-    text-align: right;
+.fa-heart {
+    color: red;
 }
 
+.days, .hours, .mins, .secs {
+    font-size: 14px;
+}
 
 /*media queries*/
 
@@ -592,12 +596,13 @@ html {
     .gdg {
         max-width: 80%;
         height: auto;
+        padding-top: 25%;
     }
     .insedge {
         padding-top: 10%;
         max-width: 61%;
         height: auto;
-   }
+    }
     .hrank {
         max-width: 105%;
         height: auto;
@@ -656,7 +661,7 @@ html {
         font-size: 14px
     }
     .footer-text {
-        font-size: 7px
+        font-size: 14px
     }
     .faq {
         font-size: 10px
