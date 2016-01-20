@@ -320,6 +320,7 @@ html {
     overflow-x: hidden;
     z-index: -20;
     opacity: 0.8;
+    margin-top: 50px;
 }
 
 .gear-big {
