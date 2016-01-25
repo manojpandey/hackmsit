@@ -632,6 +632,11 @@ html {
         height: auto;
         padding-top: 15%;
     }
+    .t69 {
+        max-width: 50%;
+        height: auto;
+        padding-top: 15%;
+    }
     .days,
     .hours,
     .mins,
@@ -712,6 +717,11 @@ html {
         height: auto;
         margin-bottom: 0px;
         /*padding-top: 15%;*/
+    }
+    .t69 {
+        max-width: 50%;
+        height: auto;
+        padding-top: 15%;
     }
     .days,
     .hours,
@@ -804,6 +814,11 @@ html {
         height: auto;
         margin-bottom: 0px;
         /*padding-top: 15%;*/
+    }
+    .t69 {
+        max-width: 50%;
+        height: auto;
+        padding-top: 15%;
     }
     .days,
     .hours,
