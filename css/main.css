@@ -513,7 +513,7 @@ html {
 }
 
 .sponser-logo {
-    height: 260px;
+    /*height: 260px;*/
     /*width: 500px;*/
 }
 
@@ -613,6 +613,25 @@ html {
         height: auto;
         padding-top: 8%;
     }
+    .github {
+        max-width: 80%;
+        height: auto;
+        padding-top: 25%;
+    }
+    .shephertz {
+        max-width: 80%;
+        height: auto;
+        padding-top: 25%;
+    }
+    .coinsec {
+        max-width: 80%;
+        height: auto;
+    }
+    .lnb {
+        max-width: 80%;
+        height: auto;
+        padding-top: 15%;
+    }
     .days,
     .hours,
     .mins,
@@ -647,14 +666,52 @@ html {
         text-align: center;
     }
     .sponser-logo {
-        height: 100px;
+        /*height: 100px;*/
         margin-bottom: 30px;
     }
-    .hrank {
+    .tst {
+        max-width: 68%;
+        height: auto;
+        padding-top: 5%;
         margin-bottom: 0px;
     }
-    .tst {
+    .gdg {
+        max-width: 80%;
+        height: auto;
+        /*padding-top: 25%;*/
+    }
+    .insedge {
+        padding-top: 10%;
+        max-width: 61%;
+        height: auto;
+    }
+    .hrank {
+        max-width: 105%;
+        height: auto;
+        padding-top: 8%;
         margin-bottom: 0px;
+    }
+    .github {
+        max-width: 80%;
+        height: auto;
+        /*padding-top: 25%;*/
+    }
+    .shephertz {
+        max-width: 80%;
+        height: auto;
+        margin-bottom: 0px;
+        /*padding-top: 25%;*/
+    }
+    .
+    .coinsec {
+        max-width: 80%;
+        height: auto;
+    }
+    .lnb {
+        max-width: 80%;
+        height: auto;
+        margin-bottom: 0px;
+        /*padding-top: 15%;*/
     }
     .days,
     .hours,
@@ -702,14 +759,51 @@ html {
         right: 55px;
     }
     .sponser-logo {
-        height: 100px;
+        /*height: 100px;*/
         margin-bottom: 30px;
     }
-    .hrank {
+    .tst {
+        max-width: 68%;
+        height: auto;
+        padding-top: 5%;
         margin-bottom: 0px;
     }
-    .tst {
+    .gdg {
+        max-width: 80%;
+        height: auto;
+        /*padding-top: 25%;*/
+    }
+    .insedge {
+        padding-top: 10%;
+        max-width: 61%;
+        height: auto;
+    }
+    .hrank {
+        max-width: 105%;
+        height: auto;
+        padding-top: 8%;
         margin-bottom: 0px;
+    }
+    .github {
+        max-width: 80%;
+        height: auto;
+        /*padding-top: 25%;*/
+    }
+    .shephertz {
+        max-width: 80%;
+        height: auto;
+        margin-bottom: 0px;
+        /*padding-top: 25%;*/
+    }
+    .coinsec {
+        max-width: 80%;
+        height: auto;
+    }
+    .lnb {
+        max-width: 80%;
+        height: auto;
+        margin-bottom: 0px;
+        /*padding-top: 15%;*/
     }
     .days,
     .hours,
