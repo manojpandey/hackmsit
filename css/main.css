@@ -647,6 +647,11 @@ html {
         height: auto;
         /*padding-top: 25%;*/
     }
+    .cloudb {
+        max-width: 100%;
+        height: auto;
+        /*padding-top: 25%;*/
+    }
     .days,
     .hours,
     .mins,
@@ -739,6 +744,11 @@ html {
         /*padding-top: 25%;*/
     }
     .jamb {
+        max-width: 80%;
+        height: auto;
+        /*padding-top: 25%;*/
+    }
+    .cloudb {
         max-width: 80%;
         height: auto;
         /*padding-top: 25%;*/
@@ -846,6 +856,11 @@ html {
         /*padding-top: 25%;*/
     }
     .jamb {
+        max-width: 80%;
+        height: auto;
+        /*padding-top: 25%;*/
+    }
+    .cloudb {
         max-width: 80%;
         height: auto;
         /*padding-top: 25%;*/
