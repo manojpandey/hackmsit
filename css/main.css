@@ -650,7 +650,7 @@ html {
     .cloudb {
         max-width: 100%;
         height: auto;
-        /*padding-top: 25%;*/
+        padding-top: 25%;
     }
     .days,
     .hours,
