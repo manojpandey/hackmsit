@@ -637,6 +637,16 @@ html {
         height: auto;
         padding-top: 15%;
     }
+    .liqserve {
+        max-width: 100%;
+        height: auto;
+        /*padding-top: 25%;*/
+    }
+    .jamb {
+        max-width: 100%;
+        height: auto;
+        /*padding-top: 25%;*/
+    }
     .days,
     .hours,
     .mins,
@@ -722,6 +732,16 @@ html {
         max-width: 50%;
         height: auto;
         padding-top: 15%;
+    }
+    .liqserve {
+        max-width: 80%;
+        height: auto;
+        /*padding-top: 25%;*/
+    }
+    .jamb {
+        max-width: 80%;
+        height: auto;
+        /*padding-top: 25%;*/
     }
     .days,
     .hours,
@@ -819,6 +839,16 @@ html {
         max-width: 50%;
         height: auto;
         padding-top: 15%;
+    }
+    .liqserve {
+        max-width: 80%;
+        height: auto;
+        /*padding-top: 25%;*/
+    }
+    .jamb {
+        max-width: 80%;
+        height: auto;
+        /*padding-top: 25%;*/
     }
     .days,
     .hours,
